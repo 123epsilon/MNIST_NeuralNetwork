@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include "Image.h"
+#include "NeuralNetwork.h"
 
 using namespace std;
 
@@ -50,8 +51,6 @@ int main() {
     vector<Image> testing_set;
     readMnistCSV(training_set,"mnist_train.csv", MNIST_TRAIN_SIZE);
     readMnistCSV(testing_set,"mnist_test.csv", MNIST_TEST_SIZE);
-
-
 
 
     return 0;
