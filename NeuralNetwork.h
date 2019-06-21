@@ -21,6 +21,7 @@ class NeuralNetwork {
 
     void forwardpropogate();
     void backpropogate();
+    //advantageous as derivative is ( S(x)*(1-S(x)) )
     double sigmoid(double x);
     //randomly initialize weights and init layers to predetermined size
     void randomInit();
