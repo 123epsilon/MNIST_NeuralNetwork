@@ -52,6 +52,11 @@ int main() {
     readMnistCSV(training_set,"mnist_train.csv", MNIST_TRAIN_SIZE);
     readMnistCSV(testing_set,"mnist_test.csv", MNIST_TEST_SIZE);
 
+    vector<Image> test;
+    test.push_back(training_set[0]);
+
+    NeuralNetwork n = NeuralNetwork(3, 100, 0.5);
+    n.think(test);
 
     return 0;
 }
