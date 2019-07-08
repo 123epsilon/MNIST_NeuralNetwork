@@ -1,7 +1,7 @@
 #include "Image.h"
 #include <math.h>
 #include <cstdlib>
-#include <ctime>
+#include <random>
 
 #pragma once
 
@@ -27,13 +27,15 @@ class NeuralNetwork {
     void backpropogate(int label);
     //advantageous as derivative is ( S(x)*(1-S(x)) )
     double sigmoid(double x);
+    double derivative(double x);
     //randomly initialize weights and init layers to predetermined size
-    void randomInit();
+    void init();
 
 public:
     NeuralNetwork(int hl, int hn, double lr);
 
     void train(vector<Image> images, int iterations);
     void think(vector<Image> images);
+    void printWeights();
 
 };
