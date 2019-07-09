@@ -53,11 +53,9 @@ int main() {
     readMnistCSV(testing_set,"mnist_test.csv", MNIST_TEST_SIZE);
 
     NeuralNetwork n = NeuralNetwork(3, 100, 0.01);
-    //n.printWeights();
-    cout << "\n\n";
     n.train(training_set,10000);
-    cout << "\n\n";
-    // n.printWeights();
+    n.think(testing_set);
+
 
     return 0;
 }
